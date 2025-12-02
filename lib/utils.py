@@ -17,3 +17,9 @@ def read_integers(filename):
     """Read input file and return list of integers."""
     with open(filename, 'r') as f:
         return [int(line.strip()) for line in f.readlines()]
+
+def chunkstring(string, length):
+    return [string[0+i:length+i] for i in range(0, len(string), length)]
+
+def all_same(items):
+    return all(x == items[0] for x in items)
